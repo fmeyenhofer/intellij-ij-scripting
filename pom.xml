@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.scijava</groupId>
+        <artifactId>pom-scijava</artifactId>
+        <version>22.4.0</version>
+        <relativePath />
+    </parent>
+
+    <packaging>jar</packaging>
+    
+    <groupId>ch.unifr.bioimage</groupId>
+    <artifactId>intellij-ij-scripting</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <package-name>ch.imagej.ij-ij-ide</package-name>
+        <license.copyrightOwners>Felix Meyenhofer</license.copyrightOwners>
+        <license.licenseName>GPLv3</license.licenseName>
+        <scijava.jvm.version>1.8</scijava.jvm.version>
+        <groovy.version>2.4.10</groovy.version>
+        <jython.version>2.7.0</jython.version>
+    </properties>
+
+    <name>intelij-ij-scripting-</name>
+    <description>
+        Example of how to develop ImageJ scripts (jython and groovy) with IntelliJ
+    </description>
+    <url>https://github.com/fmeyenhofer</url>
+    <inceptionYear>2018</inceptionYear>
+    <organization>
+        <name>University of Fribourg</name>
+        <url>www.unifr.ch</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>GPL3</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <distribution>Common Development and Distribution License (CDDL-1.0)</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>f.meyenhofer</id>
+            <name>Felix Meyenhofer</name>
+            <email>f.meyenhofer@me.com</email>
+            <url>https://github.com/Meyenhofer</url>
+            <timezone>+2</timezone>
+            <roles>
+                <role>lead</role>
+                <role>developer</role>
+                <role>debugger</role>
+                <role>reviewer</role>
+                <role>support</role>
+                <role>maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+    
+    <scm>
+        <url>none</url>
+    </scm>
+
+    <issueManagement>
+        <url>none</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>None</system>
+    </ciManagement>
+
+    <mailingLists>
+        <mailingList>
+            <name>ImageJ Forum</name>
+            <archive>http://forum.imagej.net</archive>
+        </mailingList>
+    </mailingLists>
+    
+    <repositories>
+        <repository>
+            <id>imagej.public</id>
+            <url>http://maven.imagej.net/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>imagej</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>ij</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>imagej-legacy</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <version>${groovy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.python</groupId>
+            <artifactId>jython</artifactId>
+            <version>${jython.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>
